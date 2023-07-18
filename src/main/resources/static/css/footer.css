@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.py-3 {
+	padding-bottom: 0;
+}
+
+.footer_main {
+	margin: 0 auto; margin-bottom: 10px; /* height: 130px; */
+	color: gray; font-size: 90%;
+	width: 100%;
+	 
+}
+
+.footer_main_text {
+	width: 70%; margin: 0 auto;
+}
+@media ( max-width : 1000px) {
+	.footer_main_text {
+		width: 100%;
+	}
+	.ul#footul {
+		display: block;
+	}
+}
+
+.ul {
+	padding: 0;
+}
+
+.ul>li {
+	float: left;
+}
