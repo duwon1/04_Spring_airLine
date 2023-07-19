@@ -1,0 +1,16 @@
+* 덤프
+1. scott / tiger 계정 확인 (암호가 다르면 아래의 cmd파일 수정, 계정이 scott/tiger 이면 생략)
+
+2. create_directory.cmd 실행하여 oracle에 디렉토리 생성 (이미 생성되어 있다면 생략)
+
+3. scott_dump.cmd 실행하여 덤프
+
+
+* 복구
+1. scott_user_create.cmd 실행하여 scott 유저 생성 (암호 tiger, 이미 생성되어 있다면 생략)
+
+2. create_directory.cmd 실행하여 oracle에 디렉토리 생성 (이미 생성되어 있다면 생략)
+
+3. scott_drop_schema.cmd 실행하여 scott schema object 삭제 (oracle을 새로 설치 했다면 생략)
+
+4. scott_restore.cmd에 덤프된 파일 드래앤드롭으로 복구

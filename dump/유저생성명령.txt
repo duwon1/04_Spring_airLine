@@ -1,0 +1,7 @@
+* 계정 생성
+(command windows CLI 명령)
+sqlplus sys/oracle as sysdba
+
+(sqlplus 명령)
+CREATE USER scott IDENTIFIED BY tiger;
+GRANT dba TO scott;
