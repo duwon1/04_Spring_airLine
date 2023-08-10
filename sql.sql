@@ -106,6 +106,37 @@ create table banner(
   	primary key(banner_num)
 );
 
+insert into admin (id, pwd) values('admin', 'admin');
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '아시아나항공', '아시아나.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '대한항공', '대한.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '에어부산', '에어부산.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '에어서울', '에어서울.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '이스타항공', '이스타.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '제주항공', '제주.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '진에어', '진에어.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '티웨이항공', '티웨이.png', 50, 10);
+
+insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
+values (airline_seq.nextval, '하이에어', '하이.png', 50, 10);
+
+
+-- 덤프파일 실행 했으면 view만 실행하기
 
 create or replace view view_Product as
    select * from (
@@ -182,33 +213,5 @@ select distinct(p.identity),p.prestige_sit,p.remain_prestige
 from view_prestige p;
 
 
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '아시아나항공', '아시아나.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '대한항공', '대한.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '에어부산', '에어부산.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '에어서울', '에어서울.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '이스타항공', '이스타.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '제주항공', '제주.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '진에어', '진에어.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '티웨이항공', '티웨이.png', 50, 10);
-
-insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit) 
-values (airline_seq.nextval, '하이에어', '하이.png', 50, 10);
-
-insert into admin (id, pwd) values('admin', 'admin');
 
 
