@@ -56,7 +56,8 @@
 - 사용자&공통(https://github.com/duwon1/04_Spring_airLine/issues/2)
 - 관리자(https://github.com/duwon1/04_Spring_airLine/issues/3)
 ## 데이터베이스
-- https://github.com/duwon1/04_Spring_airLine/issues/4
+<img src="!https://github.com/duwon1/04_Spring_airLine/assets/139448976/43ad2ac8-5907-4bcb-9f9e-c026f5f0ff7f>
+"
 
   
 
