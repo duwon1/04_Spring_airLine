@@ -58,6 +58,10 @@
 ## 데이터베이스
 <img src="https://github.com/duwon1/04_Spring_airLine/assets/139448976/984a5fd5-3d6d-4021-9124-2e6d3af26bcf">
 
+## 화면구성
+  - 사용자(https://github.com/duwon1/04_Spring_airLine/issues/5)
+  - 관리자()
+
   
 
   
