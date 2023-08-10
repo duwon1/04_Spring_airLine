@@ -7,10 +7,6 @@ create sequence airLine_seq start with 1 increment by 1;
 create sequence banner_seq start with 1 increment by 1;
 
 
-
-
-
-
 create table member (
 	member_num number(10),
 	id varchar2(30) not null,

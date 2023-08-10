@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+body {
+	margin: 0 auto;
+}
+
+ul {
+	 list-style:none;
+}
+ 
+ a {
+ 	text-decoration:none;
+ 	color: inherit;
+ }
+ 
+ #mainlogo{
+ 	cursor: pointer;
+ 	width: 280px;
+ 	margin-top:22px;
+ }
+ 
+
+#wrap {
+	margin: 0 auto;
+}
+
+#content {
+	width: 70%; margin: 50px auto;
+}
+
+#content_img {
+	width: 100%; margin: 50px auto;
+}
+
+header {
+	background-color: #05203c; padding: 30px 0;
+}
+
+
+.head {
+	width: 70%; margin: 0 auto; position: relative;
+	height: 130px;
+}
+
+.headul {
+ 	float: right; color: white; font-weight: bold;
+ 	margin: 30px auto; font-size: 110%; padding: 0;
+}
+.headul li {
+	margin-left: 30px; float: left;
+}
+ 
+.headul a {
+	color: white; 
+}
+
+#topmodel {
+	position: absolute; width: 150px; background-color: white;
+	border-radius: 20px 20px 20px 20px; box-shadow: -3px 3px 10px black; display: none;
+	text-align: center; right: 0; top: 70px; overflow: hidden;
+}
+
+#topmodel label {
+	display: block; position: relative; cursor: pointer; height: 60px; line-height: 60px; color: black; font-size: 100%; font-weight: bold;
+}
+
+#topmodel label:hover {
+	background-color: #4A4F5A;
+	color: white;
+}
+
+#myPageDiv {
+	position: absolute; width: 300px; height: 150px; background-color: white;
+	border-radius: 20px 20px 20px 20px; box-shadow: -3px 3px 10px black;
+	text-align: center; right: 0; top: 70px; display: none;
+}
+
+#myPageDiv label {
+	display: block; position: relative;
+	line-height: 90px; color: black; font-size: 130%; font-weight: bold;
+}
+ 
+
