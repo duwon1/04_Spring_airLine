@@ -225,7 +225,7 @@ public class MemberController {
 			System.out.println(input); // 수신된 토큰을 콘솔에 출력합니다
 		}
 
-		// 위 토큰내용을 본따 만든 클래스에 gson 파싱으로 옮겨 담습니다( sb -> OAuthToken )
+		// 위 토큰내용을 본따 만든 클래스에 gson 파싱으로 옮겨 담음
 		Gson gson = new Gson();
 		OAuthToken oAuthToken = gson.fromJson(sb.toString(), OAuthToken.class);
 
@@ -244,7 +244,7 @@ public class MemberController {
 			System.out.println(input2);
 		}
 
-		// 전달받은 회원정보를 kakaoProfile 객체에 담습니다.( sb2 -> kakaoProfile )
+		// 전달받은 회원정보를 kakaoProfile 객체에 담음
 		Gson gson2 = new Gson();
 		KakaoProfile kakaoProfile = gson2.fromJson(sb2.toString(), KakaoProfile.class);
 
