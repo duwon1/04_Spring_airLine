@@ -51,6 +51,6 @@
   
   <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
 ## 분할구조도
-  사용자&관리자(https://github.com/duwon1/04_Spring_airLine/issues/1#issue-1844488134)
+  사용자&관리자(https://github.com/duwon1/04_Spring_airLine/issues/1)
   
   
