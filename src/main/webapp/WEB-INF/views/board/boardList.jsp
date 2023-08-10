@@ -20,13 +20,15 @@
 		</div>
 	</form>
 	<table id="tableList">
-	<c:forEach items="${boardList}" var="dto">
-		<tr onclick="location.href='boardDetail?board_num=${dto.board_num}' ">
-			<th>${dto.board_num}</th>
-			<td id="maintd">${dto.title}</td>
-			<td><fmt:formatDate value="${dto.indate}" pattern="yyyy-MM-dd"/></td>
-		</tr>
-	</c:forEach>
+		<c:forEach items="${boardList}" var="dto">
+			<tr onclick="location.href='boardDetail?board_num=${dto.board_num}' ">
+				<th>${dto.board_num}</th>
+				<td id="maintd">${dto.title}</td>
+				<td>
+					<fmt:formatDate value="${dto.indate}" pattern="yyyy-MM-dd" />
+				</td>
+			</tr>
+		</c:forEach>
 	</table>
 </div>
 
