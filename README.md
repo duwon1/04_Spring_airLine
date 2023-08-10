@@ -53,8 +53,8 @@
 ## 분할구조도
   사용자&관리자(https://github.com/duwon1/04_Spring_airLine/issues/1)
 ## 기능정의서
-  유저(https://github.com/duwon1/04_Spring_airLine/issues/2)
-  관리자(https://github.com/duwon1/04_Spring_airLine/issues/3)
+- 유저(https://github.com/duwon1/04_Spring_airLine/issues/2)
+- 관리자(https://github.com/duwon1/04_Spring_airLine/issues/3)
 
   
   
