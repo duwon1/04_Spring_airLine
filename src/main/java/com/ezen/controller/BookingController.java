@@ -36,7 +36,6 @@ public class BookingController {
 
 	}
 
-	// 신정우작성-2023/07/05//////////////
 	// 옥솔비 수정 7/6
 	@RequestMapping("flightInfo1") // 출발지, 도착지, 날짜검색한걸 기반으로 노선리스트 출력
 	public String flightInfo1(@ModelAttribute("dto") @Valid Item item, BindingResult result, Model model,
