@@ -14,9 +14,11 @@ import com.google.gson.JsonSyntaxException;
 public class FlightApp {
 
 	// 주어진 출발지, 도착지, 출발일자 조건에 대한 검색결과 건수 값을 읽어옴
-	// 내부적으로는 출발지, 도착지, 출발일자 외에 페이지 1로 지정하여 FlightInfo 객체를 가져와 거기에서 totalCount 값을 가져오는
+	// 내부적으로는 출발지, 도착지, 출발일자 외에 페이지 1로 지정하여 FlightInfo 객체를 가져와 거기에서 totalCount 값을
+	// 가져오는
 	// 방식을 취한다. 주어진 검색조건에 대하여 검색결과가 0건이든 10건이든 또는 100건이든 기본적으로 1페이지의 결과는 반환하기 때문이다.
-	// 다만, 서버에서 반환하는 Json 형식에 문제가 있어 0건일 때는 JsonSyntaxException이 발생하여 getFlightInfo()가
+	// 다만, 서버에서 반환하는 Json 형식에 문제가 있어 0건일 때는 JsonSyntaxException이 발생하여
+	// getFlightInfo()가
 	// null을 반환받는 결과가 되므로 이에 주의해야 한다.
 	public static int getTotalCount(String depAirportId, String arrAirportId, long depPlandTime) {
 
@@ -33,7 +35,8 @@ public class FlightApp {
 	}
 
 	public static FlightInfo getFlightInfo(String depAirportId, String arrAirportId, long depPlandTime, int page) {
-		// (1) URL 주소로부터 스트림을 연결하고    (2) 스트림으로부터 읽어온 JSON 데이터를 Gson을 이용하여 Java 클래스 객체들로 변환시켜 출력해 본다.
+		// (1) URL 주소로부터 스트림을 연결하고 (2) 스트림으로부터 읽어온 JSON 데이터를 Gson을 이용하여 Java 클래스 객체들로
+		// 변환시켜 출력해 본다.
 		FlightInfo flightInfo = null;
 		StringBuilder sb = null;
 
@@ -49,10 +52,11 @@ public class FlightApp {
 			sb = new StringBuilder();
 
 			String input = "";
-			
+
 			// 연산순서
 			// 1) input = br.readLine() : input에 값 대입
-			// 2) input != null : input이 null 과 다른지 비교하여 다르면 while문 본체 실행. null인 경우 while문 벗어남
+			// 2) input != null : input이 null 과 다른지 비교하여 다르면 while문 본체 실행. null인 경우 while문
+			// 벗어남
 			while ((input = br.readLine()) != null) {
 				sb.append(input);
 			}
@@ -76,7 +80,7 @@ public class FlightApp {
 		}
 		System.out.println("flightInfo값 : " + flightInfo);
 		return flightInfo;
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -117,7 +121,8 @@ public class FlightApp {
 		// 51건, 101건인 경우는 각각 2페이지 3페이지가 되어야 하므로
 		int pageCount = (totalCount % 50 == 0) ? (totalCount / 50) : (totalCount / 50 + 1); // 삼항연산자
 
-		// 아래 for문이 돌면서 동일한 출발지, 도착지, 출발일자에 대해 검색결과 건수에 따라 필요한 페이지수만큼 반복해서 FlightInfo 객체를 가져온다.
+		// 아래 for문이 돌면서 동일한 출발지, 도착지, 출발일자에 대해 검색결과 건수에 따라 필요한 페이지수만큼 반복해서 FlightInfo
+		// 객체를 가져온다.
 		for (int page = 1; page <= pageCount; page++) {
 			FlightInfo flightInfo = getFlightInfo(depAirportId, arrAirportId, depPlandTime, page);
 			List<Item> flightItems = flightInfo.getResponse().getBody().getItems().getItem();

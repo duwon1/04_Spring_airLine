@@ -262,15 +262,13 @@ public class MemberController {
 			ms.joinKakao(mvo);
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mvo);
-		}else if(mvo.getProvider().equals("kakao")&& mvo.getUseyn().equals("N")) {
+		} else if (mvo.getProvider().equals("kakao") && mvo.getUseyn().equals("N")) {
 			model.addAttribute("message", "탈퇴한 계정입니다");
 			url3 = "member/loginForm";
-		} else if(mvo.getUseyn().equals("Y")) {
+		} else if (mvo.getUseyn().equals("Y")) {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mvo);
 		}
-
-		
 
 		return url3;
 	}
@@ -289,7 +287,8 @@ public class MemberController {
 		mav.setViewName("member/updateForm");
 		if (rs.getFieldError("pwd") != null && !membervo.getProvider().equals("kakao")) {
 			mav.addObject("message", rs.getFieldError("pwd").getDefaultMessage());
-		} else if ((pwdcheck == null || !membervo.getPwd().equals(pwdcheck)) && !membervo.getProvider().equals("kakao")) {
+		} else if ((pwdcheck == null || !membervo.getPwd().equals(pwdcheck))
+				&& !membervo.getProvider().equals("kakao")) {
 			mav.addObject("message", "비밀번호 확인이 틀렸습니다");
 		} else if (rs.getFieldError("name") != null) {
 			mav.addObject("message", rs.getFieldError("name").getDefaultMessage());

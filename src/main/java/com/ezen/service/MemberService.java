@@ -59,7 +59,7 @@ public class MemberService {
 
 	public List<ProductVO> getBestProduct() {
 		return mdao.getBestProduct();
-		
+
 	}
 
 }

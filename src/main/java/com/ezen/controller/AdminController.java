@@ -43,7 +43,7 @@ public class AdminController {
 	@RequestMapping("admin")
 	public String admin(HttpServletRequest request) {
 		HttpSession session = request.getSession();
-		session.removeAttribute("loginUser");		
+		session.removeAttribute("loginUser");
 		return "admin/loginForm";
 	}
 

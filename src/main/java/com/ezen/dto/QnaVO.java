@@ -20,10 +20,10 @@ public class QnaVO {
 	private String readcount;
 	private String passcheck;
 	private String pass;
-	
-	@NotEmpty(message="제목을 입력하세요")
+
+	@NotEmpty(message = "제목을 입력하세요")
 	private String title;
-	@NotEmpty(message="내용을 입력하세요")
+	@NotEmpty(message = "내용을 입력하세요")
 	private String content;
-	
+
 }
