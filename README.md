@@ -15,8 +15,7 @@
   
 - 회원
   - 로그인(회원정보 수정&탈퇴)
-  - QNA 작성&수정
-  -    
+  - QNA 작성&수정 
 
 - 비회원
   - 회원가입
@@ -25,6 +24,12 @@
   - 항공편 조회 및 예약&취소
   - 게시판(공지사항&QnA 읽기)
   - 인기여행지 확인
+
+- 관리자
+  - 공지사항(작성, 수정, 삭제)
+  - Q&A 답변
+  - 예약 정보(조회, 삭제)
+  - 회원 정보(수정, 삭제)
 ## 작업일정
 - 2023.05.16 ~ 06.02
 
@@ -45,5 +50,7 @@
 - 데이터베이스
   
   <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+## 분할구조도
+  사요자&관리자(https://github.com/duwon1/04_Spring_airLine/assets/139448976/39a15702-b7ad-4f48-845b-73d620a91cf2)
   
   
