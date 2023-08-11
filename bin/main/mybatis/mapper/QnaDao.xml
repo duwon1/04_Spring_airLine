@@ -13,7 +13,8 @@
 	<select id="getQnaList"  resultType="com.ezen.dto.QnaVO">
 		select * from (
 			select * from (
-				select rownum as rn, q.* from ( ( select * from view_qna where title like '%'||#{param2}||'%' or content like '%'||#{param2}||'%' or name like '%'||#{param2}||'%' order by qna_num desc ) q )
+				select rownum as rn, q.* from ( ( 
+					select * from view_qna where title like '%'||#{param2}||'%' or content like '%'||#{param2}||'%' or name like '%'||#{param2}||'%' order by qna_num desc ) q )
 			) where rn &gt;= #{param1.startNum}
 		) where rn &lt;= #{param1.endNum}
 	</select>

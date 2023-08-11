@@ -136,7 +136,7 @@ insert into AIRLINE (airline_num, airline_name, image, economy_sit, prestige_sit
 values (airline_seq.nextval, '하이에어', '하이.png', 50, 10);
 
 
--- 덤프파일 실행 했으면 view만 실행하기
+-- 덤프파일 실행 했으면 여기서부터 실행
 
 create or replace view view_Product as
    select * from (

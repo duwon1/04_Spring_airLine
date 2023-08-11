@@ -50,7 +50,6 @@ public class QnaService {
 
 		// 만약 1페이지를 제외한 다른 페이지에서 key를 가지고 검색한 경우 page를 1로 설정
 		if (page != 1 && !key.equals("")) {
-			System.out.println("53줄");
 			page = 1;
 		}
 
