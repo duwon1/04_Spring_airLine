@@ -206,10 +206,7 @@ public class BookingController {
 
 		paramMap.put("depAirportNm1", session.getAttribute("depAirportNm1"));
 		paramMap.put("arrAirportNm1", session.getAttribute("arrAirportNm1"));
-		/*
-		 * paramMap.put("depPlandTime1",session.getAttribute("depPlandTime1") );
-		 * paramMap.put("arrPlandTime1",session.getAttribute("arrPlandTime1") );
-		 */
+	
 		paramMap.put("depPlandTime1", dep_time);
 		paramMap.put("arrPlandTime1", arr_time);
 
@@ -243,7 +240,6 @@ public class BookingController {
 	public ModelAndView insertPassen(HttpServletRequest request,
 			// 왕복편 오는날 정보를 받아옴
 			@RequestParam(value = "passenNum", required = false) String passenNum,
-
 			@RequestParam(value = "depAirportNm", required = false) String depAirportNm1,
 			@RequestParam(value = "arrAirportNm", required = false) String arrAirportNm1,
 			@RequestParam(value = "depPlandTime", required = false) String depPlandTime1,
@@ -257,7 +253,6 @@ public class BookingController {
 		HttpSession session = request.getSession();
 		HashMap<String, Object> paramMap = new HashMap<String, Object>();
 
-		// 신정우 0711 -start
 		String dep_time = (String) session.getAttribute("depPlandTime1"); // 출발날짜 세션정보 저장
 		String arr_time = (String) session.getAttribute("arrPlandTime1"); // 도착날짜 세션정보 저장
 
@@ -275,7 +270,6 @@ public class BookingController {
 		String arr_time4 = arr_time.substring(11, 13);
 		String arr_time5 = arr_time.substring(14, 16);
 		arr_time = arr_time1 + arr_time2 + arr_time3 + arr_time4 + arr_time5;
-		// 신정우 0711 -end
 
 		// String flag=(String) session.getAttribute("flag");
 
@@ -284,10 +278,6 @@ public class BookingController {
 
 		paramMap.put("depPlandTime1", dep_time);
 		paramMap.put("arrPlandTime1", arr_time);
-		/*
-		 * paramMap.put("depPlandTime1",session.getAttribute("depPlandTime1") );
-		 * paramMap.put("arrPlandTime1",session.getAttribute("arrPlandTime1") );
-		 */
 
 		paramMap.put("airlineNm1", session.getAttribute("airlineNm1"));
 		paramMap.put("economyCharge1", session.getAttribute("economyCharge1"));
@@ -452,11 +442,8 @@ public class BookingController {
 	}
 
 	@RequestMapping("/finishReserv")
-
 	public String finishReserv() {
-
 		return "booking/finishReserv";
-
 	}
 
 	@GetMapping("checkReservForm")
@@ -464,8 +451,7 @@ public class BookingController {
 		return "booking/reservCheck";
 	}
 
-	@GetMapping("checkReserv")
-	// 예약확인
+	@GetMapping("checkReserv") // 예약확인
 	public ModelAndView checkReserv(HttpServletRequest request,
 			@RequestParam(value = "name", required = false) String name,
 			@RequestParam(value = "phone", required = false) String phone) {
@@ -500,34 +486,20 @@ public class BookingController {
 		HttpSession session = request.getSession();
 		session.setAttribute("reservNum_dep", reservNum_dep);
 		System.out.println("reservNum_dep : " + reservNum_dep);
-
-		// return "redirect:/regulationPage";
 		return "booking/deleteRegulation";
-		// return result;
-
-		// return "redirect:/passenInfoForReserv";
-
 	}
 
 	@RequestMapping(value = "/regulationPage", method = RequestMethod.POST)
 	public String regulationPage() {
-
 		return "booking/deleteRegulation";
-
 	}
 
 	@RequestMapping("deleteReserv")
-	public ModelAndView deleteReserv(HttpServletRequest request
-	// @RequestParam(required = false, value = "reservNum_return")String
-	// reservNum_return,
-	// @RequestParam("reservNum_dep") String reservNum_dep
-	) {
+	public ModelAndView deleteReserv(HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		ModelAndView mav = new ModelAndView();
 		String reservNum_dep = (String) session.getAttribute("reservNum_dep");
 
-		// mav.setViewName("redirect:checkReserv?name=" + session.getAttribute("name") +
-		// "&phone=" + session.getAttribute("phone"));
 		mav.addObject("name", session.getAttribute("name"));
 		mav.addObject("phone", session.getAttribute("phone"));
 		mav.setViewName("redirect:/checkReserv");
@@ -556,25 +528,6 @@ public class BookingController {
 		return mav;
 
 	}
-
-	/*
-	 * @RequestMapping(value="/searchPassenAdmin", method=RequestMethod.POST) // 관리자
-	 * 페이지에서 승객이름을 가지고 승객의 정보를 조회 public ModelAndView
-	 * searchPassenAdmin(HttpServletRequest request,
-	 * 
-	 * @RequestParam("name") String name,
-	 * 
-	 * @RequestParam("phone") String phone) {
-	 * 
-	 * ModelAndView mav = new ModelAndView(); System.out.println("name : " + name);
-	 * System.out.println("phone : " + phone);
-	 * 
-	 * HashMap<String,Object>list = bs.getReservAdmin(name,phone);
-	 * mav.addObject("passenlist", list.get("passenlist"));
-	 * mav.setViewName("admin/reservation/pessengerList"); return mav;
-	 * 
-	 * }
-	 */
 
 	@RequestMapping("deletePassenger") // In 관리자 페이지 : 승객 삭제
 	public ModelAndView deletePassenger(HttpServletRequest request,
