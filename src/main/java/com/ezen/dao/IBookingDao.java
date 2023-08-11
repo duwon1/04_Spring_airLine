@@ -35,7 +35,6 @@ public interface IBookingDao {
 
 	HashMap<String, Object> getReservAdmin1(HashMap<String, Object> paramMap);
 
-	// 신정우작성
 	ArrayList<ReservVO> getAirLine(String grade);
 
 }

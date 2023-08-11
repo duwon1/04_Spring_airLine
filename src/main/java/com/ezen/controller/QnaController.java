@@ -161,11 +161,6 @@ public class QnaController {
 
 		String path = context.getRealPath("/upload"); // 프로젝트 안에 webapp아래
 		// 출력
-		/*
-		 * path=D:\JAVA01\springboot\SpringBoot_G16\src\main\webapp\ upload
-		 * multipartFile=org.springframework.web.multipart.support.
-		 * StandardMultipartHttpServletRequest$StandardMultipartFile@7cf9eb2b
-		 */
 
 		// 내용이 다른데 이름이 같으면 스프링부트 multipartfile에는 중복제거정책이 없어 ★현재시간 밀리초를 사용해서 파일이름뒤에
 		// 달아준다.★
@@ -198,11 +193,6 @@ public class QnaController {
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
 		if (mvo == null) {
-			/*
-			 * if(avo != null) { //관리자로 로그인 되었을때 HashMap<String, Object> list =
-			 * qs.getQnaWithoutCount( qna_num ); mav.addObject("qnaVO",list.get("qnaVO"));
-			 * mav.setViewName("admin/qna/adminQnaDetail"); return mav; }
-			 */
 			mav.setViewName("member/loginForm");
 		} else {
 			HashMap<String, Object> list = qs.getQnaWithoutCount(qna_num);
@@ -216,10 +206,6 @@ public class QnaController {
 	@RequestMapping(value = "/qnaUpdate", method = RequestMethod.POST)
 	public String qnaUpdate(@ModelAttribute("dto") @Valid QnaVO qnavo, BindingResult result, Model model,
 			@RequestParam(value = "oldfilename", required = false) String oldfilename) {
-		System.out.println("스타트");
-		System.out.println("getfielderror: " + result.getFieldError("title"));
-		System.out.println(qnavo.getContent());
-		System.out.println(qnavo.getImgfilename());
 		String url = "qna/qnaUpdateForm";
 
 		if (result.getFieldError("title") != null) { // 타이틀에서 무슨에러가 넘어온다 -> 그래서 updateForm으로 돌아간다
