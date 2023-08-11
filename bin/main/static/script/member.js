@@ -94,7 +94,6 @@ if (matchMedia("screen and (min-width: 1000px)").matches) {
 	}
 }
 
-// 07/06 신정우 작성 07/11 내용추가(두원)
 	function submit() {
 	if (document.formm.depAirportNm.value == "") {
 		alert("출발지를 입력하세요")
