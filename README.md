@@ -60,8 +60,6 @@
 ## 화면구성
   - 사용자(https://github.com/duwon1/04_Spring_airLine/issues/5)
   - 관리자(https://github.com/duwon1/04_Spring_airLine/issues/6)
-## 기능별 설명
-  - 항공편조회()
   
 
   
