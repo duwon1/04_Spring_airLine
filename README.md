@@ -51,7 +51,7 @@
 
 - 데이터베이스 
 
-  https://github.com/duwon1/04_Spring_airLine/issues/4
+  [https://github.com/duwon1/04_Spring_airLine/issues/4](https://github.com/duwon1/04_Spring_airLine/issues/4)
 
   
 
