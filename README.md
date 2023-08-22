@@ -49,7 +49,7 @@
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
   <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
 
-- 데이터베이스 
+## 데이터베이스 
 
   ![데이터베이스](https://github.com/duwon1/04_Spring_airLine/assets/139448976/543fd787-5100-452e-948a-2b498be5ac5b)
 
