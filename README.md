@@ -51,7 +51,7 @@
 
 ## 데이터베이스 
 
-  ![데이터베이스](https://github.com/duwon1/04_Spring_airLine/assets/139448976/976f817f-cd6a-42a8-be58-65eeb1050e80)
+  ![데이터베이스](https://github.com/duwon1/04_Spring_airLine/assets/139448976/9f3f4fce-9ba7-4883-8f32-8460da56273a)
 
   - 설명
     - 회원유저/비회원유저 모두 비행기를 예약할 수 있도록 로그인여부와 상관없이 새롭게 회원정보를 입력받았습니다
