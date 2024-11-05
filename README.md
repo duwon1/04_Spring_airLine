@@ -1,7 +1,7 @@
 ![메인페이지1](https://github.com/duwon1/04_Spring_airLine/assets/139448976/a2e13f27-d170-492a-a025-4e9ec443f521)
 ![예약페이지](https://github.com/duwon1/04_Spring_airLine/assets/139448976/0adfa1aa-ff11-45d9-9afb-c8b8f868e6c2)
 ## 항공편 예약 사이트
-## 주제 및 목적
+## 주제 및 목적1
 
 - 주제
   - 항공기 예약 사이트
